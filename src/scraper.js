@@ -39,6 +39,10 @@ module.exports = (function () {
           if (err) {
             return callback(err);
           }
+          var ids = link.match(/fID=([0-9]*)/);
+          if (ids.length == 1) {
+            app.mpfId = ids[0];
+          }
           apps.push(app);
           return callback();
         });

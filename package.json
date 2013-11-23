@@ -1,6 +1,6 @@
 {
   "name": "mpf-scraper",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A module to scrape the contents of MyPebbleFaces.",
   "main": "index.js",
   "scripts": {
