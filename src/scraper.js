@@ -34,7 +34,7 @@ module.exports = (function () {
       });
       links = _.uniq(links, false);
 
-      async.eachSeries(_.first(links, 2), function (link, callback) {
+      async.eachSeries(links, function (link, callback) {
         PBW.loadUrl(link, function (err, app) {
           if (err) {
             return callback(err);
