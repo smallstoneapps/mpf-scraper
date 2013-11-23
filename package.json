@@ -1,0 +1,17 @@
+{
+  "name": "mpf-scraper",
+  "version": "0.0.3",
+  "description": "A module to scrape the contents of MyPebbleFaces.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Matthew Tole",
+  "license": "MIT",
+  "dependencies": {
+    "jsdom": "~0.8.8",
+    "underscore": "~1.5.2",
+    "async": "~0.2.9",
+    "node-pbw": "git://github.com/smallstoneapps/node-pbw.git#master"
+  }
+}
