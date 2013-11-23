@@ -34,14 +34,14 @@ module.exports = (function () {
       });
       links = _.uniq(links, false);
 
-      async.eachSeries(links, function (link, callback) {
+      async.eachSeries(_.first(links, 2), function (link, callback) {
         PBW.loadUrl(link, function (err, app) {
           if (err) {
             return callback(err);
           }
           var ids = link.match(/fID=([0-9]*)/);
-          if (ids.length == 1) {
-            app.mpfId = ids[0];
+          if (ids.length > 1) {
+            app.mpfId = parseInt(ids[1]);
           }
           apps.push(app);
           return callback();
